@@ -27,7 +27,7 @@ tr:nth-child(even){
 <center>
 <h1 style="text-align: center;font-size:35;">Kawan Ikmi</h1>
 
- <button onclick="document.location.href = '../index.html' ">Kembali</button>
+
 <table style="width:50%">
   <tr>
     <th>NIM</th>
@@ -70,44 +70,20 @@ tr:nth-child(even){
     <td>Edit</td>
     <td>Hapus</td>
   </tr>
-    <tr>
-    <td>6</td>
-    <td>Jahseh</td>
-    <td>Tegal</td>
-    <td>Edit</td>
-    <td>Hapus</td>
-  </tr>
-    <tr>
-    <td>7</td>
-    <td>Brian Imanuel</td>
-    <td>Cirebon</td>
-    <td>Edit</td>
-    <td>Hapus</td>
-  </tr>
-    <tr>
-    <td>8</td>
-    <td>warren</td>
-    <td>Indramayu</td>
-    <td>Edit</td>
-    <td>Hapus</td>
-  </tr>
-    <tr>
-    <td>9</td>
-    <td>Uegene Crab</td>
-    <td>Cirebon</td>
-    <td>Edit</td>
-    <td>Hapus</td>
-  </tr> 
-    <tr>
-    <td>10</td>
-    <td>Farid Prayogo</td>
-    <td>Cirebon</td>
-    <td>Edit</td>
-    <td>Hapus</td>
-  </tr>
 </table>
-</center>
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
+<script>
+ $(document).ready(function(){ $('.text').click(function(){ 
+  let text = $(this).text();
+  alert(`Anda mengklik text yang berisi text "${text}"`);
+   if(text!='Delete'){ 
+    let text2 = prompt('Mau diubah?:', text);
+    if(!text2) return; $(this).text(text2); }
+    else{ let yakin = confirm('Yakin?'); if(!yakin) return;  } }) }) 
+</script>
+
+</center>
 </body>
 </html>
 
